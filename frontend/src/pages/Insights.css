@@ -1,0 +1,422 @@
+/* frontend/src/pages/Insights.css */
+.insights-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.insights-header {
+  margin-bottom: 40px;
+}
+
+.back-btn {
+  background: none;
+  border: none;
+  color: #667eea;
+  font-size: 16px;
+  cursor: pointer;
+  margin-bottom: 16px;
+  padding: 0;
+  transition: color 0.3s ease;
+  font-weight: 600;
+}
+
+.back-btn:hover {
+  color: #764ba2;
+}
+
+.insights-header h1 {
+  margin: 0 0 8px;
+  font-size: 36px;
+  color: #333;
+}
+
+.insights-header p {
+  margin: 0;
+  font-size: 14px;
+  color: #999;
+}
+
+.error-page,
+.loading-page {
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.error-page h2 {
+  color: #c33;
+  margin-bottom: 16px;
+}
+
+.error-page p,
+.loading-page p {
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.error-page button,
+.error-banner button {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.error-page button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(102, 126, 234, 0.4);
+}
+
+.error-banner {
+  background-color: #fee;
+  border-left: 4px solid #c33;
+  padding: 16px;
+  border-radius: 6px;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.error-banner span {
+  color: #c33;
+  font-weight: 500;
+}
+
+.error-banner button {
+  background: none;
+  border: none;
+  color: #c33;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 0;
+}
+
+.insights-controls {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+  align-items: flex-end;
+}
+
+.column-select {
+  flex: 1;
+  min-width: 200px;
+}
+
+.column-select label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #333;
+  font-size: 14px;
+}
+
+.column-select select {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.column-select select:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.analysis-buttons {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.btn-secondary {
+  background: linear-gradient(135deg, #f59e0b 0%, #dc2626 100%);
+  color: white;
+}
+
+.btn-tertiary {
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  color: white;
+}
+
+.btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.tabs {
+  display: flex;
+  gap: 0;
+  margin-bottom: 30px;
+  border-bottom: 2px solid #eee;
+}
+
+.tab {
+  background: none;
+  border: none;
+  padding: 12px 24px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #999;
+  cursor: pointer;
+  border-bottom: 3px solid transparent;
+  transition: all 0.3s ease;
+  margin-bottom: -2px;
+}
+
+.tab:hover {
+  color: #667eea;
+}
+
+.tab.active {
+  color: #667eea;
+  border-bottom-color: #667eea;
+}
+
+.tab-content {
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.summary-tab,
+.trend-tab,
+.clustering-tab,
+.anomalies-tab {
+  animation: fadeIn 0.3s ease;
+}
+
+.summary-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.stat-box {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 24px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.stat-icon {
+  font-size: 36px;
+}
+
+.stat-value {
+  font-size: 28px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.stat-label {
+  font-size: 13px;
+  opacity: 0.9;
+  margin: 0;
+}
+
+.columns-info h3 {
+  margin: 0 0 20px;
+  color: #333;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 16px;
+}
+
+.stat-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 16px;
+  background-color: #fafafa;
+}
+
+.stat-card h4 {
+  margin: 0 0 12px;
+  color: #333;
+  font-size: 14px;
+  word-break: break-word;
+}
+
+.stat-card p {
+  margin: 8px 0;
+  font-size: 13px;
+  color: #666;
+}
+
+.stat-card strong {
+  color: #333;
+}
+
+.clustering-info {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 16px;
+  margin-bottom: 30px;
+}
+
+.info-box {
+  background-color: #f5f5f5;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.info-box .label {
+  font-size: 13px;
+  color: #999;
+  margin: 0 0 8px;
+}
+
+.info-box .value {
+  font-size: 28px;
+  font-weight: 700;
+  color: #667eea;
+  margin: 0;
+}
+
+.cluster-distribution {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.cluster-distribution h4 {
+  margin: 0 0 20px;
+  color: #333;
+}
+
+.anomalies-count {
+  background-color: #fff3cd;
+  border: 1px solid #ffc107;
+  padding: 16px;
+  border-radius: 6px;
+  margin-bottom: 20px;
+}
+
+.anomalies-count p {
+  margin: 0;
+  color: #856404;
+  font-weight: 500;
+}
+
+.anomalies-list {
+  display: grid;
+  gap: 12px;
+}
+
+.anomaly-item {
+  background-color: #f5f5f5;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 16px;
+  overflow-x: auto;
+}
+
+.anomaly-item pre {
+  margin: 0;
+  font-size: 12px;
+  font-family: 'Courier New', monospace;
+  white-space: pre-wrap;
+}
+
+.no-anomalies {
+  text-align: center;
+  padding: 40px 20px;
+  color: #10b981;
+  font-weight: 600;
+}
+
+.empty-tab {
+  text-align: center;
+  padding: 60px 20px;
+  color: #999;
+}
+
+.trend-tab h3,
+.clustering-tab h3,
+.anomalies-tab h3 {
+  margin: 0 0 20px;
+  color: #333;
+}
+
+.no-data {
+  text-align: center;
+  padding: 40px 20px;
+  color: #999;
+}
+
+@media (max-width: 768px) {
+  .insights-header h1 {
+    font-size: 28px;
+  }
+
+  .insights-controls {
+    flex-direction: column;
+  }
+
+  .column-select {
+    width: 100%;
+  }
+
+  .analysis-buttons {
+    width: 100%;
+  }
+
+  .btn {
+    flex: 1;
+    padding: 12px 16px;
+  }
+
+  .tabs {
+    flex-wrap: wrap;
+  }
+
+  .summary-stats {
+    grid-template-columns: 1fr;
+  }
+}

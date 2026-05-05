@@ -1,0 +1,23 @@
+{
+  "name": "ai-insights-frontend",
+  "version": "1.0.0",
+  "description": "AI-Based Data Aggregation and Insights Platform Frontend",
+  "type": "module",
+  "private": true,
+  "dependencies": {
+    "axios": "^1.6.2",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.20.1",
+    "recharts": "^3.8.1"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.2.1",
+    "vite": "^5.0.8"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  }
+}
